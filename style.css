@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Bebas Neue',sans-serif;
+    background: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    background-color:transparent;
+    border: 1px solid white;
+    border-radius: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+.input-box{
+    position: relative;
+    width: 300px;
+    margin: 30px 0;
+    border-bottom: 2px solid #ffffff;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #ffffff;
+    pointer-events: none;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-3px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    top: 2px;
+    line-height: 60px;
+    color: #fff;
+}
+button{
+color: #FFF;
+font-size: 17px;
+transition: all 0.5s;
+position: relative;
+width: 100%;
+height: 40px;
+border-radius: 30px;
+background-color: transparent;
+}
+button::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 30px;
+z-index: 1;
+background-color: rgba(255,255,255,0.1);
+transition: all 0.3s;
+}
+button:hover::before {
+opacity: 0 ;
+transform: scale(0.5,0.5);
+}
+button::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 30px;
+z-index: 1;
+opacity: 0;
+transition: all 0.3s;
+border: 1px solid rgba(255,255,255,0.5);
+transform: scale(1.2,1.2);
+}
+button:hover::after {
+opacity: 1;
+transform: scale(1,1);
+}
+.remember-passward{
+   margin: -15px 0 15px;
+   font-size: .9em;
+   color: #ffffff;
+   display: flex;
+   justify-content: space-between;
+}
+.remember-passward label input{
+    margin-right: 3px;
+}
+.remember-passward a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.remember-passward a:hover{
+    text-decoration: underline;
+}
+.new{
+   padding: 10px;
+   margin: 0px 30px;
+   font-size: .9em;
+   color: #ffffff;
+   display: flex;
+   justify-content: space-between;
+}
+.new a{
+    text-align: center;
+    color: #ffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.new a:hover{
+    text-decoration: underline;
+}
+@media (max-width:360px){
+    .container{
+        width: 100%;
+        height: 100vh;
+        border: none;
+    }
+}
